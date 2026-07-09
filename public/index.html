@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reading Radar</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1 id="app-title">Reading Radar</h1>
+        <p id="app-desc" class="muted"></p>
+      </div>
+      <a href="/health">health</a>
+    </header>
+    <section class="layout">
+      <aside class="panel">
+        <h2>Record</h2>
+        <form id="record-form">
+          <label for="title">Title</label>
+          <input id="title" required placeholder="Name the record">
+          <label for="details">Details</label>
+          <textarea id="details" placeholder="Important notes"></textarea>
+          <label for="status">Status</label>
+          <select id="status"><option>active</option><option>waiting</option><option>done</option><option>archived</option></select>
+          <label for="tag">Tag</label>
+          <input id="tag" placeholder="category or owner">
+          <label for="due_date">Due date</label>
+          <input id="due_date" type="date">
+          <div class="buttons">
+            <button id="save">Save</button>
+            <button class="secondary" type="button" id="clear">Clear</button>
+          </div>
+        </form>
+        <h2>Features</h2>
+        <ul id="feature-list"></ul>
+      </aside>
+      <section>
+        <div class="toolbar">
+          <input id="search" placeholder="Search records">
+          <div class="buttons">
+            <button type="button" id="export">Export JSON</button>
+            <span id="count" class="muted"></span>
+          </div>
+        </div>
+        <div id="records" class="records"></div>
+      </section>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
